@@ -17,9 +17,9 @@ An AI-powered tennis match analysis system that tracks players and ball movement
 
 ## Output Video
 
-https://user-images.githubusercontent.com/YOUR_USER_ID/output_video.mp4
+![Tennis Analysis Demo](output_videos/screen_shot.png)
 
-> **Note**: Upload the MP4 file by dragging it into a GitHub comment or issue, then copy the generated URL above. Alternatively, download the full output: [output_video.avi](output_videos/output_video.avi)
+> Full video available at: [output_video.avi](output_videos/output_video.avi)
 
 The output video includes:
 - Bounding boxes around players and ball
