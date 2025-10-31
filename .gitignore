@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data folders
+tennis_court_det_dataset/
+tennis-ball-detection-1/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Models (if they're large)
+models/
+*.pt
+*.pth
+*.weights
+
+
+
+# OS
+.DS_Store
+Thumbs.db
