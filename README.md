@@ -17,7 +17,9 @@ An AI-powered tennis match analysis system that tracks players and ball movement
 
 ## Output Video
 
-![Tennis Analysis Demo](output_videos/output_video.avi)
+![Tennis Analysis Demo](output_videos/demo.gif)
+
+> **Note**: Convert a sample clip to GIF using: `ffmpeg -i output_video.avi -vf "fps=10,scale=640:-1" -t 10 demo.gif`
 
 The output video includes:
 - Bounding boxes around players and ball
