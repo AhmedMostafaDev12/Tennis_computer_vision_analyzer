@@ -1,0 +1,37 @@
+dataset_params:
+  train_im_sets: ['data/VOC2007', 'data/VOC2012']
+  test_im_sets: ['data/VOC2007-test']
+  num_classes : 20
+  im_size : 448
+
+model_params:
+  im_channels : 3
+  backbone_channels : 512 # final output channels of backbone
+  conv_spatial_size : 7   # spatial size of conv feature map in yolo before fc layers
+  yolo_conv_channels : 1024 # channels of conv layer before fc layers in yolo 
+  leaky_relu_slope : 0.1
+  fc_dim : 4096
+  fc_dropout : 0.5
+  S : 7
+  B : 2
+  use_sigmoid : True
+  use_conv : True
+
+train_params:
+  task_name: 'voc'
+  seed: 1111
+  acc_steps: 1 # increase if you want to get gradients from >1 steps(kind of mimicking >1 batch size)
+  log_steps: 100 ## print loss every n steps
+  save_steps: 5000 ## save model every n steps
+  num_epochs: 135
+  batch_size: 64
+  lr_steps: [ 50, 75, 100, 125 ]  # epochs at which lr decays
+  lr: 0.001
+  infer_conf_threshold : 0.2  # Only keep detections with confidence ≥ 0.2 (20%)
+                              # Filters out low-confidence false positives
+                              # Higher = Fewer detections, more precision
+                              # Lower = More detections, lower precision
+
+  eval_conf_threshold : 0.001 # threshold to consider a prediction during evaluation
+  nms_threshold : 0.5       # IoU threshold for non-maximum suppression
+  ckpt_name: 'yolo_voc2007.pth' # checkpoint name to save model
